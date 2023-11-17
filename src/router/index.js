@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import FilterView from '../views/FilterView.vue'
+import AddSocio from '../views/AddSocio.vue'
 
 const routes = [
   {
@@ -18,17 +19,25 @@ const routes = [
     path: '/socios/ouro',
     name: 'ouro',
     component: FilterView,
+    props: { filtro: 'Ouro' }
   },
   {
     path: '/socios/prata',
     name: 'prata',
     component: FilterView,
+    props: { filtro: 'Prata' }
   },
   {
     path: '/socios/bronze',
     name: 'bronze',
     component: FilterView,
+    props: { filtro: 'Bronze' }
   },
+  {
+    path: '/socios/adicionar',
+    name: 'add',
+    component: AddSocio
+  }
 ]
 
 const router = createRouter({

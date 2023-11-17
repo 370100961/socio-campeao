@@ -23,7 +23,7 @@
                 <td>{{ socio.telefone }}</td>
                 <td>{{ socio.email }}</td>
                 <td class="status">
-                  <span class="ativo"></span> Ativo</td>
+                  <span :class="socio.status"></span> {{ socio.status }}</td>
             </tr>
         </tbody>
     </table>
