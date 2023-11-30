@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import FilterView from '../views/FilterView.vue'
 import AddSocio from '../views/AddSocio.vue'
+import SocioView from '../views/SocioView.vue'
 
 const routes = [
   {
@@ -37,6 +38,14 @@ const routes = [
     path: '/socios/adicionar',
     name: 'add',
     component: AddSocio
+  },
+  {
+    path: '/socios/:id',
+    name: "socioview",
+    //Criem o componente SocioView e importem
+    //neste mesmo arquivo router/index.js
+    component: SocioView,
+    props: true
   }
 ]
 
